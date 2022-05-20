@@ -1,0 +1,12 @@
+<!-- 渲染 -->
+<view class='title'>{{indexDetail.title}}</view>
+
+
+
+<!-- 图片 -->
+<image class="img" src='{{indexDetail.image}}'></image>
+
+
+<!-- 文字介绍 -->
+
+<view class='detail'>{{indexDetail.detail}}</view>

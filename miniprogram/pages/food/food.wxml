@@ -1,0 +1,152 @@
+<!--pages/food/food.wxml-->
+<!--搜索框-->
+<view class="header">
+<!--点击选择城市 跳转页面 跳转到相应页面 请求热门城市
+   渲染城市
+   定位--获取当前经纬度 选择城市
+   选择城市后 返回食疗方页面
+-->
+  <view class="location">
+    <navigator url="../../pages/selectCity/selectCity" hover-class="none">{{location}}</navigator>
+  </view>
+
+  
+  <view class="search">
+    <navigator url="../search/search" hover-class="none">请输入你想要的内容</navigator>
+  </view>
+</view>
+
+<!--产品分类-->
+<view class='product-type'>
+  <view class="item" wx:for='{{productType}}' wx:key="index">
+    <navigator url="../productType/productType?mark={{item.id}}" hover-class="none">
+    <image src="{{item.imgUrl}}"></image>
+    <view>{{item.name}}</view>
+  </navigator>
+  </view>
+</view>
+
+<!--
+<view class="product-type">
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+
+  <view class="item">
+    <image src="../../images/item1.jpg"></image>
+    <view>美容养颜</view>
+  </view>
+
+</view>
+-->
+
+<!--列表数据展示-->
+
+<!--
+<view class="list">
+  <view class='list-img'>
+    <image src="../../images/item-1.jpg"></image>
+  </view>
+  <view class='list-info'>
+    <view class="title">标题</view>
+    <view class="info">信息介绍</view>
+    <view class='info-bottom'>
+      <view class="price">$45.00</view>
+      <view class="num">2662人付款</view>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class='list-img'>
+    <image src="../../images/item-1.jpg"></image>
+  </view>
+  <view class='list-info'>
+    <view class="title">标题</view>
+    <view class="info">信息介绍</view>
+    <view class='info-bottom'>
+      <view class="price">$45.00</view>
+      <view class="num">2662人付款</view>
+    </view>
+  </view>
+</view>
+
+<view class="list">
+  <view class='list-img'>
+    <image src="../../images/item-1.jpg"></image>
+  </view>
+  <view class='list-info'>
+    <view class="title">标题</view>
+    <view class="info">信息介绍</view>
+    <view class='info-bottom'>
+      <view class="price">$45.00</view>
+      <view class="num">2662人付款</view>
+    </view>
+  </view>
+</view>
+
+<view class="list">
+  <view class='list-img'>
+    <image src="../../images/item-1.jpg"></image>
+  </view>
+  <view class='list-info'>
+    <view class="title">标题</view>
+    <view class="info">信息介绍</view>
+    <view class='info-bottom'>
+      <view class="price">$45.00</view>
+      <view class="num">2662人付款</view>
+    </view>
+  </view>
+</view>
+
+<view class="list">
+  <view class='list-img'>
+    <image src="../../images/item-1.jpg"></image>
+  </view>
+  <view class='list-info'>
+    <view class="title">标题</view>
+    <view class="info">信息介绍</view>
+    <view class='info-bottom'>
+      <view class="price">$45.00</view>
+      <view class="num">2662人付款</view>
+    </view>
+  </view>
+</view>
+
+-->
+
+<!--模板的定义和使用-->
+<import src='../../templates/foodList/foodList.wxml'/>
+<view wx:for="{{list}}" wx:key="index" bindtap="productDatail" data-id="{{item.id}}">
+  <template is='foodList' data='{{item}}'></template>
+</view>
+
+<!--<button bindtap="getMore" wx:if="{{isShow}}">点击加载更多</button>
+<view>{{moreInfo}}</view> -->
+

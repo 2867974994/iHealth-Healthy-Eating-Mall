@@ -1,0 +1,12 @@
+<!--pages/selectCity/selectCity.wxml-->
+<view class='location'>推荐</view>
+<button size="mini" class='getLocation' bindtap="getLocation" >定位</button>
+
+<view class="hotcity">热门城市</view>
+<block wx:for='{{hotCitys}}' wx:key='index'>
+	<button bindtap='selectCity' data-val='{{item}}' class="btn" size="mini">{{item}}</button>
+</block>
+
+
+<!--地图-->
+<map longitude="{{longitude}}" latitude="{{latitude}}" scale="14"></map>

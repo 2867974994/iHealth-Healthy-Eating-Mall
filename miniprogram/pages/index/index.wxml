@@ -1,0 +1,82 @@
+<!--轮播图-->
+<view class='banner'>
+  <swiper interval="3000" autoplay="true" bindchange="swiperChange" indicator-dots="true" indicator-color="rgb(252, 247, 247)" circular>
+    <swiper-item>
+      <!--这里应该可跳转链接  但是木有本地网页 所以我就不跳转了-->
+      <!-- <navigator url="http://iwenwiki.com:3002/api/banner">-->
+      <image src='../../images/banner.jpg'></image>
+      <!--</navigator> -->
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner.jpg'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!--每日一测-->
+<view class="one-day">
+  <view class="one-item">
+    <!--这里应该可跳转链接   后期 可以加  由于木有本地网页 所以我就不跳转了-->
+    <!-- <navigator url="http://iwenwiki.com:3002/api/banner">-->
+    <image src="../../images/info_left.jpg"></image>
+    <view>每日一测</view>
+    <!--</navigator> -->
+  </view>
+  <view class="one-item">
+    <!--这里应该可跳转链接  但是木有本地网页 所以我就不跳转了-->
+    <!-- <navigator url="http://iwenwiki.com:3002/api/banner">-->
+    <image src="../../images/info_right.jpg"></image>
+    <!--</navigator> -->
+    <view>每日食谱</view>
+  </view>
+</view>
+
+
+<!--首页基本信息-->
+<!--信息容器-->
+
+<view class='list'>
+
+  <view class="item" wx:for="{{list}}" wx:key="index">
+  <navigator url="../indexDetail/indexDetail?itemId={{item.id}}">
+    <view class='title'>{{item.title}}</view>
+    <view class="item-wrapper">
+      <view class="img">
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class="content">
+        <view class='info'>
+          {{item.desc}}
+        </view>
+        <view class="read-num"><text>{{item.readNum}}</text>次阅读</view>
+      </view>
+    </view>
+ </navigator>
+  </view>
+  
+</view>
+  <!--
+   //静态模板
+  <view class="item">
+    <view class='title'>标题占一行 溢出省略</view>
+    <view class="item-wrapper">
+      <view class="img">
+        <image src='../../images/info_left.jpg'></image>
+      </view>
+        <view class='info'>
+          产品信息，产品介绍  3行省略
+        </view>
+      </view>
+          <view class="read-num"><text>1234</text>次阅读</view>
+     </view>
+     -->
+  <view>我是有底线的----------</view>
